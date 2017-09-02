@@ -63,12 +63,13 @@
 -->
 
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
-    
+    <title>impress.js by Bartek Szopka @bartaz</title>
+
     <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
     <meta name="author" content="Bartek Szopka" />
 
@@ -90,7 +91,8 @@
         
     -->
     <link href="css/impress-demo.css" rel="stylesheet" />
-    
+    <link href="css/custom.css" rel="stylesheet" />
+
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
@@ -113,17 +115,18 @@
     it can be found later, when `hint` element is being described.
     
 -->
+
 <body class="impress-not-supported">
 
-<!--
+    <!--
     For example this fallback message is only visible when there is `impress-not-supported` class on body.
 -->
-<div class="fallback-message">
-    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
-    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
-</div>
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
 
-<!--
+    <!--
     
     Now that's the core element used by impress.js.
     
@@ -144,9 +147,9 @@
     right around the corner of this tag ;)
     
 -->
-<div id="impress">
+    <div id="impress">
 
-    <!--
+        <!--
         
         Here is where interesting thing start to happen.
         
@@ -163,11 +166,12 @@
         It will not be rotated or scaled.
         
     -->
-    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-        <q>Aren’t you just <b>bored</b> with all those slides-based presentations?</q>
-    </div>
+        <div id="bored" class="step slide" data-x="-1100" data-y="-1500">
+            <q>So, How much of <b>Git</b> did you actually understand?</q>
+            <img src='https://garygregory.files.wordpress.com/2016/11/git_logo.png' class='img-center'>
+        </div>
 
-    <!--
+        <!--
         
         The `id` attribute of the step element is used to identify it in the URL, but it's optional.
         If it is not defined, it will get a default value of `step-N` where N is a number of slide.
@@ -182,15 +186,20 @@
         Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
         
     -->
-    <div class="step slide" data-x="0" data-y="-1500">
-        <q>Don’t you think that presentations given <strong>in modern browsers</strong> shouldn’t <strong>copy the limits</strong> of ‘classic’ slide decks?</q>
-    </div>
 
-    <div class="step slide" data-x="1000" data-y="-1500">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
-    </div>
+        <div class="step slide" data-x="0" data-y="-1500">
+            <q>If you did understand everything properly, then</q>
+            <q> Congratulations you just might be a <strong>Genius</strong>.🎉👏</q>
+        </div>
 
-    <!--
+        <div class="step slide" data-x="1100" data-y="-1500">
+            <q>Coming back to the our Topic, do you guys know about <strong>Github</strong>?</q>
+            <br>
+            <br>
+            <img src='images/Github_Logo.png' class='img-center' width="500">
+        </div>
+
+        <!--
         
         This is an example of step element being scaled.
         
@@ -200,13 +209,25 @@
         down (4 times) to make it back to its correct size.
         
     -->
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
-    </div>
+        <div id="title" class="step" data-x="0" data-y="0" data-scale='2'>
+            <span class="ask">Can you find the right</span>
+            <h1 class='ask-q'>logo?</h1>
+        </div>
 
-    <!--
+        <div id="hello" class="step full-width" data-x="-1000" data-y="0" data-rotate-y="0" data-z="-2500" data-scale="1">
+            <img class='padd-20 img-scale-one-half' src='http://www.oit.uci.edu/wp-content/uploads/Octocat.png' width="200">
+            <img class='padd-20 img-scale-one-half' src='https://desktop.github.com/images/github-desktop-icon.png' width="200">
+            <img class='padd-20 img-scale-one-half' src='https://www.aha.io/assets/github.7433692cabbfa132f34adb034e7909fa.png' width="400">
+            <img class='padd-20 img-scale-one-half' src='https://dwa5x7aod66zk.cloudfront.net/assets/labtocat-be5eee0434960a8f73e54910df8e87b8a5a3b2d651c0b301670c04a9cc26a70f.png' width="200">
+            <img class='padd-20 img-scale-one-half' src='https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png' width="200">
+            <img class='padd-20 img-scale-one-half' src='https://image.flaticon.com/icons/png/512/23/23957.png' width="200">
+            <img class='padd-20 img-scale-one-half' src='http://ericsteinborn.com/github-for-cats/img/ironcat.png' width="200">
+            <img class='padd-20 img-scale-one-half' src='http://www.pngall.com/wp-content/uploads/2016/04/Github-PNG-Clipart.png' width="400">
+            <img class='padd-20 img-scale-one-half' src='https://octodex.github.com/images/gangnamtocat.png' width="200">
+            <img class='padd-20 img-scale-one-half' src='http://arokem.github.io/2016-03-27-pulse2percept/images/github-6-xxl.png' width="200">
+        </div>
+
+        <!--
         
         This element introduces rotation.
         
@@ -214,17 +235,43 @@
         element should be rotated by 90 degrees clockwise.
         
     -->
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>It’s a <strong>presentation tool</strong> <br/>
-        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
-    </div>
+        <div class="step slide" data-x="0" data-y="1500" data-rotate='90'>
+            <q>Finally, What is Github?</q>
+            <br>
+            <br>
+            <p class='text-content'>
+                It is a cloud based <strong>V</strong>ersion <strong>C</strong>ontrol <strong>S</strong>ystem <strong>(VCS)</strong> service provider which provides you with git and all of its features over a network to help you collaborate better with
+                people far away from you.
+            </p>
+        </div>
 
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
-    </div>
+        <div class="step" data-x="-1000" data-y="2000" data-rotate="90" data-scale="1">
+            <img src='images/meme-1.jpg' class='' width="1000">
+        </div>
 
-    <!--
+        <div class="step slide" data-x="0" data-y="3000" data-rotate='90'>
+            <q>Lets break it down...</q>
+            <br>
+            <br>
+            <p class='text-content'>
+                <strong>VCS</strong> - We already know about it. Git is a VCS system.
+            </p>
+            <br>
+            <p class='text-content'>
+                <strong>Service Provider</strong> - Providing git as a service.
+            </p>
+            <br>
+            <p class='text-content'>
+                <strong>Over a Network</strong> -
+                <br> So you learned git, how exactly did you plan on sharing your code and using git with people in some other country to maintain it?
+            </p>
+        </div>
+
+        <div id="big" class="step" data-x="1600" data-y="4000" data-scale="4">
+            <p>Upload it to a <b>SERVER</b></p>
+        </div>
+
+        <!--
         
         And now it gets really exciting! We move into third dimension!
         
@@ -233,11 +280,14 @@
         positioned far away from us (by 3000px).
         
     -->
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
-    </div>
+        <div class="step" data-x="500" data-y="2800" data-z="-1000" data-rotate="-90" data-scale="2">
+            <p>but how <b>efficient</b> is that?</p>
+        </div>
 
-    <!--
+        <div id='big2' class="step" data-x="2800" data-y="2500" data-scale="4">
+            <p>NOT <b>MUCH!</b></p>
+        </div>
+        <!--
         
         This step here doesn't introduce anything new when it comes to data attributes, but you
         should notice in the demo that some words of this text are being animated.
@@ -257,24 +307,24 @@
         Only one current step has the `present` class.
         
     -->
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
-    </div>
+        <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+            <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
+        </div>
 
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
-    </div>
+        <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
+            <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
+        </div>
 
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
-    </div>
+        <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+            <p>want to know more?</p>
+            <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
+        </div>
 
-    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
-    </div>
+        <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
+            <p>one more thing...</p>
+        </div>
 
-    <!--
+        <!--
         
         And the last one shows full power and flexibility of impress.js.
         
@@ -286,12 +336,12 @@
         as `data-rotate` (these two are basically aliases).
         
     -->
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it’s</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
-    </div>
+        <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+            <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it’s</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
+            <span class="footnote">* beat that, prezi ;)</span>
+        </div>
 
-    <!--
+        <!--
         
         So to summarize of all the possible attributes used to position presentation steps, we have:
         
@@ -306,12 +356,12 @@
         CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
         
     -->
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+        <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+        </div>
+
     </div>
 
-</div>
-
-<!--
+    <!--
     
     Hint is not related to impress.js in any way.
     
@@ -335,16 +385,16 @@
     Just sayin' ;)
     
 -->
-<div class="hint">
-    <p>Use a spacebar or arrow keys to navigate</p>
-</div>
-<script>
-if ("ontouchstart" in document.documentElement) { 
-    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
-}
-</script>
+    <div class="hint">
+        <p>Use a spacebar or arrow keys to navigate</p>
+    </div>
+    <script>
+        if ("ontouchstart" in document.documentElement) {
+            document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+        }
+    </script>
 
-<!--
+    <!--
     
     Last, but not least.
     
@@ -359,10 +409,12 @@ if ("ontouchstart" in document.documentElement) {
     Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
     
 -->
-<script src="js/impress.js"></script>
-<script>impress().init();</script>
+    <script src="js/impress.js"></script>
+    <script>
+        impress().init();
+    </script>
 
-<!--
+    <!--
     
     The `impress()` function also gives you access to the API that controls the presentation.
     
@@ -388,6 +440,7 @@ if ("ontouchstart" in document.documentElement) {
 -->
 
 </body>
+
 </html>
 
 <!--
@@ -434,4 +487,3 @@ if ("ontouchstart" in document.documentElement) {
     Cheers!
     
 -->
-
